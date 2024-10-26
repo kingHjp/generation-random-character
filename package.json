@@ -1,6 +1,6 @@
 {
   "name": "generation-random-character",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "生成随机字符串，适用于生成随机密码或验证码",
   "main": "index.js",
   "scripts": {
