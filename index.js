@@ -7,7 +7,7 @@
  @param {boolean} includeSymbols 是否包含特殊字符
  @return {string} 生成的随机密码
 */
-export function generateRandomPassword(length=10, includeUpperCase, includeLowerCase, includeNumbers, includeSymbols) {
+function generateRandomPassword(length=10, includeUpperCase, includeLowerCase, includeNumbers, includeSymbols) {
   if (length <= 0) {
     console.error('密码长度必须大于0');
     return null;
@@ -35,7 +35,7 @@ export function generateRandomPassword(length=10, includeUpperCase, includeLower
  @param {string} characters 自定义字符集合
  @return {string} 生成的随机密码
 */
-export function customCharacters(length=10, characters='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+-=[]{}|;:,.<>?') {
+function customCharacters(length=10, characters='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+-=[]{}|;:,.<>?') {
   if (length <= 0) {
     console.error('密码长度必须大于0');
     return null;
@@ -53,7 +53,7 @@ export function customCharacters(length=10, characters='ABCDEFGHIJKLMNOPQRSTUVWX
  * @param {string} password 密码
  * @return {string} 打乱顺序后的密码
 */
-export function shuffleCharacterOrder(password) {
+function shuffleCharacterOrder(password) {
   if (password.length === 0) {
     console.error('字符不存在');
     return null;
@@ -73,7 +73,7 @@ export function shuffleCharacterOrder(password) {
  @param {boolean} isDisruption 是否打乱字符顺序
  @return {string} 生成的随机密码
 */
-export function generateSecret(option) {
+function generateSecret(option) {
   const options = {
     customUpperCase: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
     upperCaseLength: 0,
@@ -115,3 +115,9 @@ export function generateSecret(option) {
   }
 }
 
+module.exports = {
+  generateRandomPassword,
+  customCharacters,
+  shuffleCharacterOrder,
+  generateSecret
+}
