@@ -8,6 +8,10 @@
   },
   "keywords": ["随机字符串", "随机密码", "随机验证码"],
   "homepage": "https://github.com/kingHjp/generation-random-character",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.com/",
+    "provenance": true
+  },
   "author": "",
   "license": "ISC"
 }
